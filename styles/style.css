@@ -65,6 +65,7 @@ nav li a {
     color: #3A3A3A;
     font-size: 0.8rem;
     font-weight: 600;
+    margin: 18px 0px;
 }
 
 .primary {
@@ -75,15 +76,106 @@ nav li a {
     font-size: 1rem;
     font-weight: 700;
     border: none;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .banner-image {
-    width: 400px;
-    height: 410px;
+
     background-image: url('../images/Circle\ design.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /* border: 1px solid red; */
 
 }
+
+.banner-image img{
+    width: 95%;
+    margin: 0 auto;
+}
+/* logo styles */
+.logo-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-top: 2px solid rgb(215, 212, 212);
+    border-bottom: 1px solid rgb(215, 212, 212);
+}
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+    margin: 20px;
+
+    
+}
+
+/* cart styles */
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+.cart-title{
+    color: #3A3A3A;
+font-size: 1.8rem;
+font-weight: 600;
+text-align: center;
+margin-top: 100px;
+}
+.cart{
+
+    padding: 10px;
+
+    border-radius: 5px;
+background: #FFF;
+box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cart img{
+    width: 100%;
+}
+.see-more {
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: right;
+    width: 90%;
+    
+}
+
+/* media query */
+    @media screen and (max-width:576px){
+        header{
+           
+            padding: 10px;
+        }
+        nav,
+        .banner,
+        ul,
+        .logo,
+        .container{
+            flex-direction: column;
+        }
+        .logo img{
+            grid-template-columns: repeat(4 , 1fr);
+        }
+        .banner-image{
+            width: 100%;
+            border: 1px solid red;
+            margin: 0 auto;
+           
+        }
+        .container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+    }
+    
